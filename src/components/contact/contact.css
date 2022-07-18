@@ -1,0 +1,145 @@
+#contact-det {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 80px;
+}
+.contact-header {
+  background-image: url("./media/hero4.png") !important;
+  background-size: calc(140vh);
+  background-position: 90%;
+}
+.details {
+  width: 40%;
+}
+.map {
+  width: 55%;
+  height: 400px;
+}
+.map img {
+  width: 100%;
+  height: 100%;
+}
+#contact-det span {
+  font-size: 12px;
+}
+#contact-det h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+#contact-det h3 {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+#contact-det li {
+  display: flex;
+  padding: 10px 0;
+}
+#contact-det li i {
+  font-size: 14px;
+  padding-right: 22px;
+}
+#contact-det li p {
+  margin: 0;
+  font-size: 14px;
+}
+#form-detel {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 80px;
+  border: 1px solid #1a1a1a;
+}
+#form-detel form {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#form-detel form span {
+  font-size: 12px;
+}
+#form-detel form h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+#form-detel form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #2b2a2a;
+  margin-bottom: 25px;
+  border-radius: 4px;
+}
+#form-detel form textarea {
+  width: 100%;
+  border: 1px solid #2b2a2a;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  padding: 10px;
+}
+#form-detel form button {
+  background-color: #088178;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.people {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.people div {
+  display: flex;
+  align-items: flex-start;
+  padding: 5px;
+}
+.people div img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+.people div p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 25px;
+}
+.people div p span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+@media (max-width: 767px) {
+  #form-detel {
+    padding: 40px;
+  }
+  #form-detel form {
+    width: 55%;
+  }
+}
+@media (max-width: 477px) {
+  #contact-det {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .details {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .map {
+    width: 100%;
+  }
+  #form-detel {
+    margin: 10px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+  }
+  #form-detel form {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
