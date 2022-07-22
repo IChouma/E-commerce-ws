@@ -18,19 +18,19 @@
 }
 #header h4 {
   padding-bottom: 15px;
-  color: black;
+  color:var(--black-color);
 }
 #header h1 {
-  color: #088178;
+  color: var(--178-color);
 }
 #header h2 {
-  color: #088178;
+  color: var(--178-color);
 }
 #header p {
-  color: black;
+  color: var(--black-color);
 }
 #header button {
-  color: #088178;
+  color: var(--178-color);
   background-image: url(./button.png);
   width: 100px;
   height: 25px;

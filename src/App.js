@@ -8,7 +8,10 @@ import Shop from './components/shop/shop'
 import Blog from './components/blog/blog'
 import About from './components/about/about'
 import Contact from './components/contact/contact'
+import SignUp from './components/signUp/signUp'
 import Cart from './components/cart-page/cart'
+import SignIn from './components/signIn/signIn'
+import Payment from './components/payment/payment';
 
 
 
@@ -24,6 +27,10 @@ function App() {
      <Route path="/about" element={<About/>}/>
      <Route path="/contact" element={<Contact/>}/>
      <Route path="/cart"  element={<Cart/>}/>
+     <Route path="/cart"  element={<Cart/>}/>
+     <Route path="payment"  element={<Payment/>}/>
+     <Route path="/signUp"  element={<SignUp/>}/>
+     <Route path="/signIn"  element={<SignIn/>}/>
     </Routes>
   </BrowserRouter>
     </Provider>

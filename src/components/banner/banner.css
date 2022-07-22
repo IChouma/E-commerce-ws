@@ -19,16 +19,16 @@
   background-position: center;
 }
 #banner h4 {
-  color: #fff;
+  color: var(--fff-color);
   font-size: 16px;
 }
 #banner h2 {
-  color: white;
+  color: var(--fff-color);
   font-size: 30px;
   padding: 10px 0;
 }
 #banner h2 span {
-  color: orange;
+  color: var(--orange-color);
 }
 
 @media (max-width: 767px) {

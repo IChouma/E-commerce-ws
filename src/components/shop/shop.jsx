@@ -1,9 +1,9 @@
+import React, { Fragment,  } from 'react';
 import "./shop.css"
 import Nav from '../nav/nav'
 import Footer from '../footer/footer'
-import React, { Fragment,  } from 'react';
-import { useSelector, useDispatch, } from 'react-redux';
-import  { cartt,selectCart} from "../../cart-slice";
+import { useSelector } from 'react-redux';
+import  { selectCart} from "../../cart-slice";
 import f1 from "./media/f1.jpg"
 import f2 from "./media/f2.jpg"
 import f3 from "./media/f3.jpg"
@@ -14,13 +14,19 @@ import n1 from "./media/f6.jpg"
 import n2 from "./media/f7.jpg"
 import n3 from "./media/f8.jpg"
 import n4 from "./media/n8.jpg"
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Shop () {
-const cartp = useSelector(selectCart);
-  const dispatch = useDispatch();
+localStorage.getItem("connected","false");
 
+function Shop () {
+  useEffect(() => {
+       let home=document.getElementById('home')
+    let shop=document.getElementById('shop')
+    shop.classList.add('active')
+    home.classList.remove('active')
+  });
+const cartp = useSelector(selectCart);
    const states={
     fproducts:[
       {img:n1,brand:"adidas",pName:"Cartoon Astronaut T-Shirts",price:95},
@@ -33,37 +39,15 @@ const cartp = useSelector(selectCart);
  ]
   };
   
- function  show4(){
-const smallimg=document.querySelector('.small-img4')
+ function  show(x){
 const mainimg=document.querySelector('#mainimg')
-mainimg.src=smallimg.src
+mainimg.src=x.currentTarget.src
     }
-function   show1(){
-const smallimg=document.querySelector('.small-img1')
-const mainimg=document.querySelector('#mainimg')
-mainimg.src=smallimg.src
 
-    }
-function   show2(){
-const smallimg=document.querySelector('.small-img2')
-const mainimg=document.querySelector('#mainimg')
-mainimg.src=smallimg.src
+const signIn=useNavigate();
+const cart=useNavigate();
 
-    }
-function   show3(){
-const smallimg=document.querySelector('.small-img3')
-const mainimg=document.querySelector('#mainimg')
-mainimg.src=smallimg.src
-    }
-  useLayoutEffect(()=>{
-    const home=document.querySelector('#home')
-    const shop=document.querySelector('#shop')
-    // shop.classList.add('active')
-    // home.classList.remove('active');
-  })
-
-
-      const fproducts=states.fproducts.map((pd)=>{
+const fproducts=states.fproducts.map((pd)=>{
         return (
            <div  key={Math.random()} className="pro">
                     <img src={pd.img} alt="" />
@@ -83,26 +67,25 @@ mainimg.src=smallimg.src
                 </div>
         )
       });
-    const cart=useNavigate();
        
       const cartproduct=states.cartProduct.map((cp)=>{ 
         if (cp!==0){
         return (
-           <section key={Math.random()} id="prodetails" className="section-p1">
+           <section key={Math.random()**2} id="prodetails" className="section-p1">
       <div className="sproimg">
         <img src={cp.img1} width="100%" alt="" id="mainimg"/>
         <div className="smallimgg">
           <div className="small-img-c">
-            <img src={cp.img2} width="100%" className="small-img small-img1" alt="" onClick={show1} />
+            <img src={cp.img2} width="100%" className="small-img small-img1" alt="" onClick={(e)=>show(e)} />
           </div>
           <div className="small-img-c">
-            <img src={cp.img3} width="100%" className="small-img small-img2" alt="" onClick={show2}  />
+            <img src={cp.img3} width="100%" className="small-img small-img2" alt="" onClick={(e)=>show(e)}  />
           </div>
           <div className="small-img-c">
-            <img src={cp.img4} width="100%" className="small-img small-img3" alt="" onClick={show3}  />
+            <img src={cp.img4} width="100%" className="small-img small-img3" alt="" onClick={(e)=>show(e)} />
           </div>
           <div className="small-img-c">
-            <img src={cp.img5} width="100%" className="small-img small-img4" alt="" onClick={show4} />
+            <img src={cp.img5} width="100%" className="small-img small-img4" alt="" onClick={(e)=>show(e)} />
           </div>
         </div>
       </div>
@@ -118,16 +101,21 @@ mainimg.src=smallimg.src
           <option >Large</option>
         </select>
         <input type="number" defaultValue={"1"}  />
-        <button key={Math.random()} onClick={()=>cart('/cart')} className="normal">Add To Cart</button>
+        <button key={Math.random()} 
+         onClick={()=>localStorage.getItem("connected")=="true"?cart('/cart'):signIn("/signIn")} 
+        className="normal">Add To Cart</button>
         <h4>Products Details</h4>
         <span>{cp.span}</span>
       </div>
     </section>
         )}
         else{
-          return <p className="npPro">You can shoose a product from home page!</p>
+          return <p key={Math.random()} className="npPro">You can shoose a product from home page!</p>
         }
       })
+      ;
+
+
   return (
   <Fragment>
     <Nav />

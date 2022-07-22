@@ -8,9 +8,10 @@ header {
   flex-direction: column;
   padding: 40px;
 }
+
 header h2,
 header h2 {
-  color: #fff;
+  color: var(--fff-color);
 }
 .section-p1 {
   padding: 0 80px;
@@ -25,12 +26,12 @@ header h2 {
   justify-content: center;
 }
 #pagination a {
-  background-color: #088178;
+  background-color: var(--178-color);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  color: #fff;
+  color: var(--fff-color);
   font-weight: 600;
   margin-right: 5px;
   width: 40px;
@@ -78,11 +79,11 @@ header h2 {
   padding-left: 10px;
   font-size: 16px;
   margin-right: 10px;
-  border: 1px solid black;
+  border: 1px solid var(--black-color);
 }
 .sprodetails button {
-  background-color: #088178;
-  color: #fff;
+  background-color: var(--178-color);
+  color: var(--fff-color);
 }
 .sprodetails span {
   line-height: 25px;

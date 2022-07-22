@@ -3,7 +3,7 @@ header.blog-header {
   background-size: cover;
 }
 .blog-header> p{
-  color: #fff;
+  color: var(--fff-color);
 }
 #blogsec {
   padding: 150px 150px 0 150px;
@@ -29,7 +29,7 @@ header.blog-header {
 }
 .blog-details a {
   font-size: 11px;
-  color: #000;
+  color: var(--black-color);
   font-weight: 700;
   position: relative;
   transition: 0.3s;
@@ -38,16 +38,16 @@ header.blog-header {
   content: "";
   width: 50px;
   height: 1px;
-  background-color: #000;
+  background-color: var(--black-color);
   position: absolute;
   top: 4px;
   right: -60px;
 }
 .blog-details a:hover {
-  color: #088178;
+  color: var(--178-color);
 }
 .blog-details a:hover::after {
-  background-color: #088178;
+  background-color: var(--178-color);
 }
 .blog-box h1 {
   position: absolute;
@@ -55,7 +55,7 @@ header.blog-header {
   left: 0;
   font-size: 70px;
   font-weight: 700;
-  color: #c9cbce;
+  color: var(--gray50-color);
   z-index: -9;
 }
 @media (max-width: 477px) {

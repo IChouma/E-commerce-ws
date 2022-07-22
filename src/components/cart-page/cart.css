@@ -4,19 +4,25 @@
 .cart-header {
   background-image: url("./b16.jpg") !important ;
   background-size: contain;
-    background-size: calc(70vw);
+  background-size: calc(70vw);
   background-position: 90%;
 }
 #cart {
   padding: 40px 80px;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
 }
 #cart table {
   width: 100%;
+  min-width: 800px;
+  max-width: 100%;
+
   border-collapse: collapse;
-  table-layout: fixed;
+  /* table-layout: fixed; */
+  overflow-x: auto;
   white-space: nowrap;
-  left: auto;
+  /* left: auto; */
 }
 #cart table img {
   width: 70px;
@@ -25,6 +31,9 @@
 #cart table tr td:nth-child(1) {
   width: 100px;
   text-align: center;
+}
+#cart table tr td:nth-child(1) input {
+ background-color: var(--178-color);
 }
 #cart table td:nth-child(2) {
   width: 150px;
@@ -41,12 +50,11 @@
   text-align: center;
 }
 #cart table td:nth-child(5) input {
-  width: 70px;
-  padding: 10px 5px 10px 15px;
-  border: 1px solid #000;
+  width: 60px;
+  height: 25px;
 }
 #cart table thead {
-  border: 1px solid #e2e9e1;
+  border: 1px solid var(--gray70-color);
   border-left: none;
   border-right: none;
 }
@@ -61,6 +69,32 @@
 }
 #cart table tbody td {
   font-size: 13px;
+}
+.c-quant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--black-color);
+  margin-top: 25px;
+  padding: 10px !important;
+}
+.c-quant > input {
+  border: 0 !important;
+  outline: none;
+  text-align: center;
+  height: 25px;
+  line-height: 25px;
+}
+.c-quant button {
+  color: var(--black-color);
+  font-size: 20px;
+  background-color: var(--a9c-color);
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 7px;
 }
 #cart-add {
   padding: 40px 80px;
@@ -77,21 +111,21 @@
   padding-bottom: 15px;
 }
 #coupon input {
-  border: 1px solid #e2e9e1;
+  border: 1px solid var(--gray70-color);
   padding: 10px 20px;
   width: 60%;
   margin-right: 10px;
 }
 #coupon button,
 #subtotal button {
-  background-color: #088178;
-  color: #fff;
+  background-color: var(--178-color);
+  color: var(--fff-color);
   padding: 12px 20px;
 }
 #subtotal {
   width: 50%;
   margin-bottom: 30px;
-  border: 1px solid #e2e9e1;
+  border: 1px solid var(--gray70-color);
   padding: 30px;
 }
 #subtotal table {
@@ -101,7 +135,7 @@
 }
 #subtotal table td {
   width: 50%;
-  border: 1px solid #e2e9e1;
+  border: 1px solid var(--gray70-color);
   padding: 10px;
   font-size: 13px;
 }

@@ -20,16 +20,16 @@
   width: 23%;
   min-width: 250px;
   padding: 10px 12px;
-  border: 1px solid #cce7d0;
+  border: 1px solid var(--cce-color);
   border-radius: 20px;
   cursor: pointer;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  box-shadow: 20px 20px 30px var(--black02-color);
   margin: 15px 0;
   transition: 0.2s ease;
   position: relative;
 }
 .pro:hover {
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 20px 20px 30px var(--black06-color);
 }
 .pro img {
   width: 100%;
@@ -40,12 +40,12 @@
   padding: 10px 0;
 }
 .description span {
-  color: #606063;
+  color: var(--606-color);
   font-size: 12px;
 }
 .description h5 {
   padding-top: 7px;
-  color: #1a1a1a;
+  color: var(--1a1-color);
   font-size: 14px;
 }
 
@@ -57,7 +57,7 @@
     padding-top: 7px;
     font-size: 15px;
     font-weight: 700;
-    color: #088178;
+    color: var(--178-color);
     text-align: start;
 }
 .pro a{
@@ -65,10 +65,10 @@
     height: 40px;
     line-height: 40px;
     border-radius: 50px;
-    background-color: #e8f6ea;
+    background-color: var(--e8f-color);
     font-weight: 500;
-    color:  #088178;
-    border: 1px solid #cce7d0;
+    color:  var(--178-color);
+    border: 1px solid var(--cce-color);
     position: absolute;
     bottom: 10px;
     right: 10px;

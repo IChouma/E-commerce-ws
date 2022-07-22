@@ -1,6 +1,8 @@
 import React, {useEffect, Fragment, useRef, useState } from 'react';
 import {useDispatch, useSelector } from 'react-redux';
-import  {shopiCart,shoppCart } from '../../shpc-slice';
+import  {paid, selectCart,} from "../../cart-slice";
+import  {shoppCart } from '../../shpc-slice';
+
 import "./cart.css"
 import Nav from '../nav/nav'
 import Footer from '../footer/footer'
@@ -10,45 +12,96 @@ import f7 from "./media/f7.jpg"
 import f3 from "./media/f7.jpg"
 import f4 from "./media/f7.jpg"
 import f5 from "./media/f7.jpg"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,} from 'react-router-dom';
+// import { current } from '@reduxjs/toolkit';
+import Payment from "../payment/payment"
 
 
 function Cart () {
-const usdispatch=useDispatch();
 const shopCart=useSelector(shoppCart);
+const payment=useNavigate()
 const cart=useNavigate()
+const input=useRef();
+const cbox=useRef();
+const dispatch=useDispatch();
+const paids=useSelector(selectCart)
+console.log(paids)
 const state={
   shopCart:[
-         {name:"ilhamatiiii",brand:"adidas",img1:f1,price:25,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
-         {name:"ilhamatiiii",brand:"adidas",img1:f2,price:65,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
-         {name:"ilhamatiiii",brand:"adidas",img1:f3,price:108,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
+         {name:"Cartoon Astronaut T-Shirts",brand:"adidas",img1:f1,price:25,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
+         {name:"Cartoon Astronaut T-Shirts",brand:"adidas",img1:f2,price:65,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
+         {name:"Cartoon Astronaut T-Shirts",brand:"adidas",img1:f3,price:108,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
     
   ]
 };
 const tol=[]
-const toTal=state.shopCart.map(function(e,index){
-   tol.push((Number(localStorage.getItem(`qt-${index}`)))*e.price);
+state.shopCart.map(function(e,index){
+  if(localStorage.getItem(`checked-${index}`)){
+    tol.push((Number(localStorage.getItem(`qt-${index}`)))*e.price)
+  }
+  
    return tol
 });
-const totl=tol.reduce((e,c)=>e+c)
-console.log(totl)
+const totl=tol.reduce((e,c)=>e+c,0)
 const gocart=function(){
   return cart('/cart')
-}
+};
+
+useEffect(() => {
+
+   const cbox=document.querySelectorAll(`.checked`);
+     for (let i = 0; i < cbox.length; i++) {
+  localStorage.getItem(`checked-${i}`)?cbox[i].setAttribute("checked",""):console.log("a");
+     }
+});
+
 const shCart=state.shopCart.map((pro,index)=>{
-let tot=document.querySelector(".totalp");
   if(shopCart!==shopCart[0]){
-  return(
+    return(
     <tr key={Math.random()}>
-          <td><a href=""><i className="far fa-times-cercle">A</i></a></td>
+          <td><input ref={cbox} className={"checked"}  type="checkbox"
+          readOnly
+
+          onClick={function(e){
+            e.target.hasAttribute("checked")?
+            e.target.removeAttribute("checked")
+            :e.target.setAttribute("checked","");
+            localStorage.getItem(`checked-${index}`)?
+            localStorage.removeItem(`checked-${index}`):
+            localStorage.setItem(`checked-${index}`,`check-${index}`);
+            localStorage.getItem(`checked-${index}`)
+            ? e.target.setAttribute("checked","")
+            :e.target.removeAttribute("checked","");
+
+          }
+          } 
+            /></td>
           <td><img src={pro.img1} alt="" /></td>
           <td>{pro.name}</td>
           <td>${pro.price}</td>
-          <td><input type="number" className='quantity' 
-          onChange={(e)=>{setInterval(() => {e.target.value>=0?localStorage.setItem(`qt-${index}`,e.target.value):localStorage.setItem(`qt-${0}`) }, 300)
-          ;gocart()}}
-            defaultValue={localStorage.getItem(`qt-${index}`)} /></td>
-          <td className='totalp'>${pro.price*localStorage.getItem(`qt-${index}`)}</td>
+          <td className="c-quant">
+            <button 
+            onClick={function(){
+             pro.quantity=localStorage.getItem(`qt-${index}`);
+             pro.quantity=Number(pro.quantity)-1;
+             if(pro.quantity>=0)
+             {localStorage.setItem(`qt-${index}`,pro.quantity)};
+             gocart()
+
+            }} >-</button>
+            <input ref={input} type="text" defaultValue={localStorage.getItem(`qt-${index}`)>0?localStorage.getItem(`qt-${index}`):0}/>
+            <button  
+            onClick={function(){
+              pro.quantity=localStorage.getItem(`qt-${index}`);
+              pro.quantity=Number(pro.quantity)+1;
+              if(pro.quantity>=0)
+             {localStorage.setItem(`qt-${index}`,pro.quantity);}
+             gocart()
+
+            }}>+</button>
+            </td>
+            
+          <td className='totalp'>$ {localStorage.getItem(`qt-${index}`)>=0?pro.price*localStorage.getItem(`qt-${index}`):0}</td>
         </tr>
   )}
   else{
@@ -92,7 +145,7 @@ let tot=document.querySelector(".totalp");
     <div id="coupon">
       <h3>Apply Coupons</h3>
       <div> 
-        <input type="text" placeholder="Enter Yiur Coupon" />
+        <input type="text" placeholder="Enter Your Coupon" />
         <button className="normal">Apply</button>
       </div>
     </div>
@@ -102,7 +155,7 @@ let tot=document.querySelector(".totalp");
         <tbody>
         <tr>
           <td>Cart subtotal</td>
-          <td>${totl}</td>
+          <td>${totl>=0?totl:0}</td>
         </tr>
         <tr>
           <td>Shipping</td>
@@ -110,11 +163,15 @@ let tot=document.querySelector(".totalp");
         </tr>
         <tr>
           <td><strong>Total</strong></td>
-          <td>$ {totl}</td>
+          <td>$ {totl>=0?totl:0}</td>
         </tr>
         </tbody>
       </table>
-      <button className="normal">Proced to checkout</button>
+      <button 
+      onClick={function(){payment("/payment")
+      dispatch(paid(totl))
+    }}
+       className="normal">Proced to checkout</button>
     </div>
    </section>
    

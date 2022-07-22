@@ -20,13 +20,16 @@ export const cartReducer = createSlice({
     shopCart: (state,action) => {
       state.value += action.payload;
     },
+    paid: (state,action) => {
+      state.value = action.payload;
+    },
   },
     
   
 }
 );
 
-export const { shopCart,cartt,initialState,status } = cartReducer.actions;
+export const {paid, shopCart,cartt,initialState,status } = cartReducer.actions;
 export const selectCart = (state) => state.cart.value;
 
 export default cartReducer.reducer;

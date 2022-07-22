@@ -1,0 +1,89 @@
+#payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  padding-top: 30px;
+  flex-direction: column;
+  gap: 20px;
+}
+#payment > div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid var(--178-color);
+  align-items: center;
+  padding: 25px;
+}
+#payment >div >span span{
+    color: rgb(9, 180, 9);
+}
+#payment >div >span span{
+   background-color: rgb(214, 205, 191);
+   padding: 10px 20px;
+}
+input[name="cardholder"] {
+  width: 300px;
+  margin-left: 0;
+}
+input[name="cardNumber"] {
+  width: 350px;
+}
+input[name="expdate"] {
+  width: 80px !important;
+}
+input[name="cvv"] {
+  width: 80px !important;
+}
+.userinfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+  width: 100%;
+}
+.holdername {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.userinfo input{
+    width: 250px !important;
+}
+.payinfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+#payment > div input {
+  height: 45px;
+  border: 1px solid #191b1b;
+  padding: 3px 10px;
+}
+#payment > div button {
+  background-color: var(--178-color);
+  border-radius: 3px;
+  color: var(--fff-color);
+  width: 100px;
+  height: 35px;
+}
+h3 span{
+    color: var(--178-color);
+}
+
+#payment a {
+  text-decoration: none !important;
+}
+#payment a span {
+  text-decoration: underline;
+}
+@media (max-width: 477px) {
+  #payment > div {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+}

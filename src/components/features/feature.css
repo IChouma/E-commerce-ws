@@ -14,8 +14,8 @@ section .fe-box {
   width: 180px;
   text-align: center;
   padding: 25px 15px;
-  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.05);
-  border: 1px solid #cce7d0;
+  box-shadow: 20px 20px 34px var(--black05-color);
+  border: 1px solid var(--cce-color);
   border-radius: 4px;
   margin: 15px 0;
 }
@@ -30,7 +30,7 @@ section .fe-box:hover {
   padding: 9px 8px 6px 8px;
   line-height: 1;
   border-radius: 4px;
-  color: #088178;
+  color: var(--178-color);
   background-color: #fddde4;
   display: inline-block;
 }

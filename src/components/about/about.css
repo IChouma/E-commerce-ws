@@ -8,13 +8,14 @@
   align-items: center;
   padding: 40px 80px;
 }
+
 #about-header img {
   width: 50%;
   height: auto;
 }
 .about-header p,
 .about-header h2 {
-  color: #fff;
+  color: var(--fff-color)
 }
 #about-header div {
   width: 50%;

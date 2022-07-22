@@ -6,7 +6,7 @@ import React, { Component, Fragment } from 'react';
 import c1 from "./media/c1.png"
 import c2 from "./media/c2.png"
 import c3 from "./media/c3.png"
-import img1 from "../../images/feed-image-1.png"
+import img1 from "./media/map.png"
 
 
 
@@ -36,14 +36,15 @@ render(){
             <i className="fal fa-map">A</i>
             <p>95 Glassford Street Glasgow GI 1UL New Taza</p>
           </li>
+                    <li>
+            <i className="fal fa-map">C</i>
+            <p>iiicii@outlook.com</p>
+          </li>
           <li>
             <i className="fal fa-map">B</i>
             <p>abdeljabarichouma@gmail.com</p>
           </li>
-          <li>
-            <i className="fal fa-map">C</i>
-            <p>elqadmiilham@gmail.com</p>
-          </li>
+
           <li>
             <i className="fal fa-map">D</i>
             <p>Monday to Saturday 9:00 Am to 16:00 Pm</p>
@@ -67,15 +68,15 @@ render(){
       <div className="people">
         <div>
           <img src={c1} alt="" />
-          <p><span>Ilham Elqadmi</span>senior Marketing Manger <br /> Phone:00212 661 771 140 <br />elqadmiilham@gmail.com</p>
+          <p><span>Ilham Elqadmi</span>senior Marketing Manger <br /> Phone:00212 661 771 140 <br />iiicii@outlook.com</p>
         </div>
         <div>
           <img src={c2} alt="" />
-          <p><span>Ilham Elqadmi</span>senior Marketing Manger <br />Phone:00212 661 771 140 <br />elqadmiilham@gmail.com</p>
+          <p><span>Ilham Elqadmi</span>senior Marketing Manger <br />Phone:00212 661 771 140 <br />iiicii@outlook.com</p>
         </div>
         <div>
           <img src={c3} alt="" />
-          <p><span>Ilham Elqadmi</span>senior Marketing Manger <br />Phone:00212 661 771 140 <br />elqadmiilham@gmail.com</p>
+          <p><span>Ilham Elqadmi</span>senior Marketing Manger <br />Phone:00212 661 771 140 <br />iiicii@outlook.com</p>
         </div>
       </div>
     </section>

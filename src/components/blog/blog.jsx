@@ -13,7 +13,7 @@ import arrow from "./media/arrow.png"
 
 function Blog(){
 useEffect(()=>{
-        const home=document.querySelector('#home')
+    const home=document.querySelector('#home')
     const blog=document.querySelector('#blog')
     blog.classList.add('active')
     home.classList.remove('active')
