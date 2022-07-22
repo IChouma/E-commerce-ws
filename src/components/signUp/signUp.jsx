@@ -8,7 +8,6 @@ import { useRef } from 'react';
 
 function SignUp() {
     const signIn=useNavigate()
-    const [state, setState]=useState();
         const username=useRef()
         const name=useRef()
         const mail=useRef()

@@ -1,7 +1,7 @@
-import React, {useState, Fragment, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { Fragment } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import  { cartt,selectCart} from "../../cart-slice";
+import  { cartt} from "../../cart-slice";
 import "./fproducts.css";
 import f1 from "./media/f1.jpg"
 import f2 from "./media/f2.jpg"
@@ -22,7 +22,6 @@ import n8 from "./media/n8.jpg"
 import star from "./media/star.png"
 
 function  FProducts() {
-    const cartp=useSelector(selectCart);
     const dispatch=useDispatch();
     const cart=useNavigate();
  const  state={

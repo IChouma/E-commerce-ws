@@ -97,7 +97,7 @@ const fproducts=states.fproducts.map((pd)=>{
         </select>
         <input type="number" defaultValue={"1"}  />
         <button key={Math.random()} 
-         onClick={()=>localStorage.getItem("connected")=="true"?cart('/cart'):signIn("/signIn")} 
+         onClick={()=>localStorage.getItem("connected")==="true"?cart('/cart'):signIn("/signIn")} 
         className="normal">Add To Cart</button>
         <h4>Products Details</h4>
         <span>{cp.span}</span>

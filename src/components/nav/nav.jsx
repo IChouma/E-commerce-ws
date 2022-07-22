@@ -1,4 +1,4 @@
-import React, { Fragment, useRef } from 'react';
+import React, { Fragment } from 'react';
 import  {Link, useNavigate } from 'react-router-dom';
 import "./nav.css"
 import logo from './media/logo.png'
@@ -16,14 +16,12 @@ function  Nav () {
     bag.classList.add('.bagg')
   }
  function close(){
-    const close=document.getElementById('close');
     const nav=document.getElementById('navbar');
       nav.classList.remove("active");
 
   };
 
  function active(){
-    const bar=document.getElementById('bar');
     const nav=document.getElementById('navbar');
       nav.classList.add("active");
   }

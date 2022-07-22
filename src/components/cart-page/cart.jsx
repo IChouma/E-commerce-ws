@@ -8,10 +8,7 @@ import Nav from '../nav/nav'
 import Footer from '../footer/footer'
 import f1 from "./media/f1.jpg"
 import f2 from "./media/f2.jpg"
-import f7 from "./media/f7.jpg"
 import f3 from "./media/f7.jpg"
-import f4 from "./media/f7.jpg"
-import f5 from "./media/f7.jpg"
 import { useNavigate ,} from 'react-router-dom';
 import Payment from "../payment/payment"
 
@@ -125,7 +122,7 @@ const shCart=state.shopCart.map((pro,index)=>{
    <section id="cart"  >
     <table>
       <thead>
-        <tr>
+        <tr key={Math.random()}>
           <td>Remove</td>
           <td>Image</td>
           <td>Products</td>

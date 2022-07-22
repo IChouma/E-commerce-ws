@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import  "./payment.css";
 import Nav from '../nav/nav'
 import Footer from '../footer/footer'
-import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import  { selectCart,} from "../../cart-slice";
 import pay from "./pay.png"
