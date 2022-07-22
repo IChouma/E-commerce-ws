@@ -1,4 +1,4 @@
-import React, {useEffect, Fragment, useRef, useState } from 'react';
+import React, {useEffect, Fragment, useRef } from 'react';
 import {useDispatch, useSelector } from 'react-redux';
 import  {paid, selectCart,} from "../../cart-slice";
 import  {shoppCart } from '../../shpc-slice';
@@ -13,7 +13,6 @@ import f3 from "./media/f7.jpg"
 import f4 from "./media/f7.jpg"
 import f5 from "./media/f7.jpg"
 import { useNavigate ,} from 'react-router-dom';
-// import { current } from '@reduxjs/toolkit';
 import Payment from "../payment/payment"
 
 

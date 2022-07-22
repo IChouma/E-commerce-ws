@@ -39,7 +39,7 @@ function SignUp() {
                 <button
                 onClick={()=>submit(username.current.value,name.current.value,mail.current.value,password.current.value)}
                 >sign Up</button>
-                <a href={""} onClick={()=>signIn('/signIn')}>have account ?  <span>sign in</span></a>
+                <a href={"#signup"} onClick={()=>signIn('/signIn')}>have account ?  <span>sign in</span></a>
             </div>
         </section>
         <Footer/>

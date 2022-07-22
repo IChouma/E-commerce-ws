@@ -35,19 +35,19 @@ function  Footer() {
             </div>
             <div className="col">
                 <h4>About</h4>
-                <a href="">About us</a>
-                <a href="">Dilevery Information</a>
-                <a href="">Privacy Policy</a>
-                <a href="">Terms & Conditions</a>
-                <a href="">Contact us</a>
+                <a href="#footer">About us</a>
+                <a href="#footer">Dilevery Information</a>
+                <a href="#footer">Privacy Policy</a>
+                <a href="#footer">Terms & Conditions</a>
+                <a href="#footer">Contact us</a>
             </div>
             <div className="col">
                 <h4>My Account</h4>
-                <a href="">Sign in</a>
-                <a href="">View Cart</a>
-                <a href="">My Wishlist</a>
-                <a href="">Track My order</a>
-                <a href="">Help</a>
+                <a href="/signIn">Sign in</a>
+                <a href="/cart">View Cart</a>
+                <a href="footer#">My Wishlist</a>
+                <a href="#footer">Track My order</a>
+                <a href="#footer">Help</a>
             </div>
             <div className="col install">
                 <h4>Install App</h4>

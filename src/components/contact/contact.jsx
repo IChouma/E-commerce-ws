@@ -1,7 +1,7 @@
 import "./contact.css"
 import Nav from '../nav/nav'
 import Footer from '../footer/footer'
-import Feature from '../features/feature'
+// import Feature from '../features/feature'
 import React, { Component, Fragment } from 'react';
 import c1 from "./media/c1.png"
 import c2 from "./media/c2.png"

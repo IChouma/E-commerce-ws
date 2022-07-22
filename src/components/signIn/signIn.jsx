@@ -28,7 +28,7 @@ function SignIn() {
                 <input ref={mail} type="mail" placeholder='xy@xyz.com'/>
                 <input ref={password} type="password" placeholder='password' />
                 <button onClick={()=>check(mail.current.value,password.current.value)}>sign In</button>
-                <a href={""} onClick={()=>signUp('/signUp')}>Create account</a>
+                <a href={"#signin"} onClick={()=>signUp('/signUp')}>Create account</a>
             </div>
         </section>
         <Footer/>

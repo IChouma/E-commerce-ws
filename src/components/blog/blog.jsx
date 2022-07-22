@@ -1,7 +1,7 @@
 import "./blog.css"
 import Nav from '../nav/nav'
 import Footer from '../footer/footer'
-import React, { Component, Fragment, useEffect } from 'react';
+import React, {  Fragment, useEffect } from 'react';
 import b1 from "./media/b1.jpg"
 import b7 from "./media/b7.jpg"
 import b2 from "./media/b2.jpg"
@@ -37,7 +37,7 @@ useEffect(()=>{
                 <p>ilhamati i love you so much and want to be with you from bottom of my heart
                     ilhamati i love you so much and want to be with you from bottom of my heart
                 </p>
-                <a href="#">CONTINUE READING</a>
+                <a href="#blogsec">CONTINUE READING</a>
             </div>
             <h1>13/01</h1>
         </div>
@@ -50,7 +50,7 @@ useEffect(()=>{
                 <p>ilhamati i love you so much and want to be with you from bottom of my heart
                     ilhamati i love you so much and want to be with you from bottom of my heart
                 </p>
-                <a href="#">CONTINUE READING</a>
+                <a href="#blogsec">CONTINUE READING</a>
             </div>
             <h1>13/01</h1>
         </div>
@@ -63,7 +63,7 @@ useEffect(()=>{
                 <p>ilhamati i love you so much and want to be with you from bottom of my heart
                     ilhamati i love you so much and want to be with you from bottom of my heart
                 </p>
-                <a href="#">CONTINUE READING</a>
+                <a href="#blogsec">CONTINUE READING</a>
             </div>
             <h1>13/01</h1>
         </div>
@@ -76,7 +76,7 @@ useEffect(()=>{
                 <p>ilhamati i love you so much and want to be with you from bottom of my heart
                     ilhamati i love you so much and want to be with you from bottom of my heart
                 </p>
-                <a href="#">CONTINUE READING</a>
+                <a href="#blogsec">CONTINUE READING</a>
             </div>
             <h1>13/01</h1>
         </div>
@@ -89,7 +89,7 @@ useEffect(()=>{
                 <p>ilhamati i love you so much and want to be with you from bottom of my heart
                     ilhamati i love you so much and want to be with you from bottom of my heart
                 </p>
-                <a href="#">CONTINUE READING</a>
+                <a href="#blogsec">CONTINUE READING</a>
             </div>
             <h1>13/01</h1>
         </div>
@@ -102,7 +102,7 @@ useEffect(()=>{
                 <p>ilhamati i love you so much and want to be with you from bottom of my heart
                     ilhamati i love you so much and want to be with you from bottom of my heart
                 </p>
-                <a href="#">CONTINUE READING</a>
+                <a href="#blogsec">CONTINUE READING</a>
             </div>
             <h1>13/01</h1>
         </div>
@@ -115,15 +115,15 @@ useEffect(()=>{
                 <p>ilhamati i love you so much and want to be with you from bottom of my heart
                     ilhamati i love you so much and want to be with you from bottom of my heart
                 </p>
-                <a href="#">CONTINUE READING</a>
+                <a href="#blogsec">CONTINUE READING</a>
             </div>
             <h1>13/01</h1>
         </div>
        </section>
     <section id="pagination" className="section-p1">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#"><img src={arrow} alt="" /></a>
+        <a href="#blogsec">1</a>
+        <a href="#blogsec">2</a>
+        <a href="#blogsec"><img src={arrow} alt="" /></a>
     </section>
       <section id="newslatter" className='section-p1 section-m1'>
             <div className="newstext">

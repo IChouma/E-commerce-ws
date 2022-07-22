@@ -40,7 +40,7 @@ function About() {
         </div>
       </section>
       <section id="about-app"  className="section-p1 ">
-        <h1>Download Our <a href="#">App</a></h1>
+        <h1>Download Our <a href="#about-headr">App</a></h1>
         <div className="video"><video autoPlay  src={video1}></video></div>
       </section>
       <Feature/>

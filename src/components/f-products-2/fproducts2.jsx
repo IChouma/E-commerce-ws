@@ -1,4 +1,4 @@
-import React, { Component,Fragment } from 'react';
+import React, {Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import  { cartt,selectCart} from "../../cart-slice";
@@ -24,7 +24,7 @@ import star from "./media/star.png"
 
  
 function FProducts2 (){
-    const cartp=useSelector(selectCart);
+    // const cartp=useSelector(selectCart);
     const dispatch=useDispatch();
     const cart=useNavigate();
  const  state={
