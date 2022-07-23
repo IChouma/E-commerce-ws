@@ -109,7 +109,9 @@ nav {
   transform: rotateZ(-45deg);
   transform-origin: 58%;
 }
-
+#hide-bag{
+  display: block;
+}
 @media (max-width: 767px) {
   #navbar {
     display: flex;
@@ -152,8 +154,11 @@ nav {
     display: block;
   }
   #hide-bag {
-    display: none;
+    display: none !important;
   }
+  #shopright{
+  display: block;
+}
 }
 
 @media (max-width: 477px) {
@@ -164,3 +169,4 @@ nav {
     display: block;
   }
 }
+

@@ -66,7 +66,7 @@ const fproducts=states.fproducts.map((pd)=>{
       const cartproduct=states.cartProduct.map((cp)=>{ 
         if (cp!==0){
         return (
-           <section key={Math.random()**2} id="prodetails" className="section-p1">
+           <section key={Math.random()} id="prodetails" className="section-p1">
       <div className="sproimg">
         <img src={cp.img1} width="100%" alt="" id="mainimg"/>
         <div className="smallimgg">

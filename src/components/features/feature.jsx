@@ -20,7 +20,7 @@ function  Feature(){
     ]}
   const feature=state.feature.map(function(feature){
   return (
-         <div key={feature.img} className='fe-box'>
+         <div key={Math.random()} className='fe-box'>
              <img src={feature.img} alt="" />
              <h6>{feature.shipping}</h6>
          </div>

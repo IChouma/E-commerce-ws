@@ -10,7 +10,6 @@ import f1 from "./media/f1.jpg"
 import f2 from "./media/f2.jpg"
 import f3 from "./media/f7.jpg"
 import { useNavigate ,} from 'react-router-dom';
-import Payment from "../payment/payment"
 
 
 function Cart () {
@@ -21,7 +20,6 @@ const input=useRef();
 const cbox=useRef();
 const dispatch=useDispatch();
 const paids=useSelector(selectCart)
-console.log(paids)
 const state={
   shopCart:[
          {name:"Cartoon Astronaut T-Shirts",brand:"adidas",img1:f1,price:25,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
@@ -47,7 +45,9 @@ useEffect(() => {
 
    const cbox=document.querySelectorAll(`.checked`);
      for (let i = 0; i < cbox.length; i++) {
-  localStorage.getItem(`checked-${i}`)?cbox[i].setAttribute("checked",""):console.log("a");
+      if(localStorage.getItem(`checked-${i}`)){
+        cbox[i].setAttribute("checked","")
+      }
      }
 });
 
@@ -68,7 +68,7 @@ const shCart=state.shopCart.map((pro,index)=>{
             localStorage.getItem(`checked-${index}`)
             ? e.target.setAttribute("checked","")
             :e.target.removeAttribute("checked","");
-
+            gocart()
           }
           } 
             /></td>

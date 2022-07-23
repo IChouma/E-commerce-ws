@@ -16,13 +16,17 @@ function  Nav () {
     bag.classList.add('.bagg')
   }
  function close(){
+  const navg=document.querySelector('nav')
+  const bar=document.getElementById('bar')
     const nav=document.getElementById('navbar');
       nav.classList.remove("active");
-
+  navg.appendChild(bar)
   };
 
  function active(){
+  const bar=document.getElementById('bar')
     const nav=document.getElementById('navbar');
+     bar.remove()
       nav.classList.add("active");
   }
     return (
@@ -40,22 +44,22 @@ function  Nav () {
             <Link to="" className='close' onClick={close} >
                 <hr className='hr1' /><hr className='hr2' />
               </Link>
-              {localStorage.getItem("connected")=="true"? 
-              <button onClick={(e)=>localStorage.getItem("connected")=="false"? sinUp("/signIn"):e.preventDefault()}
+              {localStorage.getItem("connected")==="true"? 
+              <button onClick={(e)=>localStorage.getItem("connected")==="false"? sinUp("/signIn"):e.preventDefault()}
                className='signIn'>{localStorage.getItem("username")}
                 <span onClick={()=>{
                   localStorage.clear();
                   sinIn('/signIn')
                 }} >
-                  <img src={logout} alt=""  /></span>
+                  <img src={logout} alt="logo"  /></span>
                 
                 </button>
               :<button onClick={()=>sinUp("/signUp")} className='signUp'>sign In/Up</button>}
           </ul>
           </div>
           <div id="mobile">
-            <li > <Link to="/cart"  ><img src={shCart} alt=""className='far-fa-shopping-bag' /></Link></li>
-            <i id="bar" onClick={active} ><div  className='far-fa-shopping-bag bar-hr '>
+            <li id='shopright' > <Link to="/cart"  ><img src={shCart} alt="cart"className='far-fa-shopping-bag' /></Link></li>
+            <i id="bar" onClick={active}  ><div  className='far-fa-shopping-bag bar-hr '>
               <hr />
               <hr />
               <hr />
