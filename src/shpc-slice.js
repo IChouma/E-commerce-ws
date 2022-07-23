@@ -7,7 +7,7 @@ export const shopCartReducer = createSlice({
   name: 'cart',
   initialState : {
   value: 
-  {name:"ilhamatiiii",brand:"adidas",img1:f1,price:95,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
+  {name:"ilhamatiiii",brand:"adidas",img1:f1,price:95,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
   
   status: 'idle',
 },
