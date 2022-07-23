@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import  "./signUp.css";
 import Nav from '../nav/nav'
 import Footer from '../footer/footer'

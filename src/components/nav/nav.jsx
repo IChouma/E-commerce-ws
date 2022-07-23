@@ -11,10 +11,10 @@ import logout from './media/logout.png';
 function  Nav () {
   const sinUp=useNavigate();
   const sinIn=useNavigate();
-   function bagg(){ 
-    const bag=document.querySelector('.bag')
-    bag.classList.add('.bagg')
-  }
+  //  function bagg(){ 
+  //   const bag=document.querySelector('.bag')
+  //   bag.classList.add('.bagg')
+  // }
  function close(){
   const navg=document.querySelector('nav')
   const bar=document.getElementById('bar')

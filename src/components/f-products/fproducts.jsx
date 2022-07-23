@@ -27,14 +27,14 @@ function  FProducts() {
  const  state={
     name:"ilhamaaaa",
     products:[
-         {name:" Product-x",brand:"adidas",img1:f1,img2:f2,img3:f3,img4:f4,img5:f5,price:95,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
-         {name:" Product-x",brand:"adidas",img1:f2,img2:f3,img3:f4,img4:f5,img5:f6,price:96,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
-         {name:" Product-x",brand:"adidas",img1:f3,img2:f4,img3:f5,img4:f6,img5:f7,price:97,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
-         {name:" Product-x",brand:"adidas",img1:n1,img2:n2,img3:n3,img4:n4,img5:n5,price:98,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
-         {name:" Product-x",brand:"adidas",img1:n6,img2:n7,img3:n8,img4:f1,img5:f2,price:94,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
-         {name:" Product-x",brand:"adidas",img1:f6,img2:f1,img3:f1,img4:f1,img5:f4,price:93,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
-         {name:" Product-x",brand:"adidas",img1:f7,img2:f7,img3:f1,img4:f1,img5:f4,price:92,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
-         {name:" Product-x",brand:"adidas",img1:f8,img2:f8,img3:f1,img4:f1,img5:f4,price:91,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
+         {name:" Product-x",brand:"adidas",img1:f1,img2:f2,img3:f3,img4:f4,img5:f5,price:95,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
+         {name:" Product-x",brand:"adidas",img1:f2,img2:f3,img3:f4,img4:f5,img5:f6,price:96,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
+         {name:" Product-x",brand:"adidas",img1:f3,img2:f4,img3:f5,img4:f6,img5:f7,price:97,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
+         {name:" Product-x",brand:"adidas",img1:n1,img2:n2,img3:n3,img4:n4,img5:n5,price:98,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
+         {name:" Product-x",brand:"adidas",img1:n6,img2:n7,img3:n8,img4:f1,img5:f2,price:94,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
+         {name:" Product-x",brand:"adidas",img1:f6,img2:f1,img3:f1,img4:f1,img5:f4,price:93,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
+         {name:" Product-x",brand:"adidas",img1:f7,img2:f7,img3:f1,img4:f1,img5:f4,price:92,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
+         {name:" Product-x",brand:"adidas",img1:f8,img2:f8,img3:f1,img4:f1,img5:f4,price:91,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",},
 
     ]
    

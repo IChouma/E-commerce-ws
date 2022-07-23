@@ -19,12 +19,11 @@ const cart=useNavigate()
 const input=useRef();
 const cbox=useRef();
 const dispatch=useDispatch();
-const paids=useSelector(selectCart)
 const state={
   shopCart:[
-         {name:"Cartoon Astronaut T-Shirts",brand:"adidas",img1:f1,price:25,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
-         {name:"Cartoon Astronaut T-Shirts",brand:"adidas",img1:f2,price:65,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
-         {name:"Cartoon Astronaut T-Shirts",brand:"adidas",img1:f3,price:108,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
+         {name:"Cartoon Astronaut T-Shirts",brand:"adidas",img1:f1,price:25,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
+         {name:"Cartoon Astronaut T-Shirts",brand:"adidas",img1:f2,price:65,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
+         {name:"Cartoon Astronaut T-Shirts",brand:"adidas",img1:f3,price:108,h6:"Home / B-Shirts",h4:"Men's Fasion T Shirts",span:" dolores beatae maxime? Dignissimos beatae velit commodi maxime?",quantity:1,},
     
   ]
 };
@@ -109,7 +108,7 @@ const shCart=state.shopCart.map((pro,index)=>{
     const home=document.querySelector('#home')
     const cart=document.querySelector('.hide-bag')
     home.classList.remove('active')
-    cart .classList.add('active')
+    cart.classList.add('active')
   });
   
   return (

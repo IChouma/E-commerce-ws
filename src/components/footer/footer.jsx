@@ -1,4 +1,4 @@
-import React, { Component,Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 import "./footer.css"
 
@@ -25,11 +25,11 @@ function  Footer() {
                 <div className="follow">
                     <h4>Fellow us</h4>
                     <div className="icon">
-                        <i><img src={twitter} alt="image" /></i>
-                        <i><img src={linkedin} alt="image" /></i>
-                        <i><img src={facebook} alt="image" /></i>
-                        <i><img src={youtube} alt="image" /></i>
-                        <i><img src={instagram} alt="image" /></i>
+                        <i><img src={twitter} alt="" /></i>
+                        <i><img src={linkedin} alt="" /></i>
+                        <i><img src={facebook} alt="" /></i>
+                        <i><img src={youtube} alt="" /></i>
+                        <i><img src={instagram} alt="" /></i>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,6 @@
-import React, { Component,Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 import "./collection.css";
-import img from "../../images/feed-image-2.png"
 
 
  
