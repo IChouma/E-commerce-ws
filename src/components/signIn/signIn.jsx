@@ -15,7 +15,7 @@ function SignIn() {
   const mail=useRef()
   const password=useRef()
   const check=(a,b)=>{
-    a==localStorage.getItem("mail")&& b==localStorage.getItem("password")?home('/home'):signIn('/signIn');
+    a===localStorage.getItem("mail")&& b===localStorage.getItem("password")?home('/home'):signIn('/signIn');
     localStorage.setItem("connected","true")
   }
   return (

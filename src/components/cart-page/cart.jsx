@@ -1,6 +1,6 @@
 import React, {useEffect, Fragment, useRef } from 'react';
 import {useDispatch, useSelector } from 'react-redux';
-import  {paid, selectCart,} from "../../cart-slice";
+import  {paid,} from "../../cart-slice";
 import  {shoppCart } from '../../shpc-slice';
 
 import "./cart.css"

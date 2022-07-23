@@ -1,4 +1,4 @@
-import React, { Component,Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 import "./feature.css";
 import f1 from "./media/f1.png"
