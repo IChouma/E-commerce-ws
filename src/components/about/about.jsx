@@ -35,8 +35,8 @@ function About() {
              <abbr title="">Create Stuning images with as much or as little control as you 
              like thanks to a choice of Basic and Creative modes.</abbr>
              <br /><br />
-             <marquee bgcolor="#ccc" loop="-1" scrollamount="7" width="100%" behavior="" direction="">Create Stuning images with as much or as little control as you 
-             like thanks to a choice of Basic and Creative modes.</marquee>
+             {/* <marquee bgcolor="#ccc" loop="-1" scrollamount="7" width="100%" behavior="" direction="">Create Stuning images with as much or as little control as you 
+             like thanks to a choice of Basic and Creative modes.</marquee> */}
         </div>
       </section>
       <section id="about-app"  className="section-p1 ">
